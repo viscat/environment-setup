@@ -1,0 +1,35 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_sudoers: yes
+
+dotfiles_repo: https://github.com/viscat/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/dotfiles
+dotfiles_files:
+  - .gitconfig
+  - .inputrc
+  - .vimrc
+
+packages:
+  - bash-completion
+  - go
+  - gpg
+  - httpie
+  - nmap
+  - npm
+  - nvm
+  - ssh-copy-id
+  - openssl
+  - wget
+  - docker
+  - firefox
+  - google-chrome
+  - sequel-pro
+  - skitch
+  - slack
+  - sublime-text
+  - transmit
+  - vagrant
+  - virtualbox
+  - oh-my-zsh

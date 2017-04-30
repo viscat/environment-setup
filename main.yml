@@ -1,0 +1,22 @@
+---
+- hosts: all
+  connection: local
+
+  vars_files:
+    - config.yml
+
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_fileglob:
+        - ../config.yml
+
+  roles:
+    - geerlingguy.git
+    - geerlingguy.dotfiles
+
+
+  tasks:
+    - include: tasks/ansible-setup.yml
+
+    - include: tasks/sudoers.yml
+      when: configure_sudoers
