@@ -1,0 +1,10 @@
+---
+- name: Create .vim folder
+  file:  
+    path: ~/.vim/colors
+    state: directory
+    mode: 0755
+- name: Install crunchbang color scheme
+  get_url:
+    url: https://raw.githubusercontent.com/nightsense/vim-crunchbang/master/colors/crunchbang.vim
+    dest: ~/.vim/colors/crunchbang.vim

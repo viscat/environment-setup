@@ -11,25 +11,21 @@ dotfiles_files:
   - .inputrc
   - .vimrc
 
+oh_my_zsh_theme: sorin
+
+phpstorm_version        : 2017.1.3
+phpstorm_install_dir    : /opt
+phpstorm_bin            : /usr/local/bin/phpstorm
+
+
 packages:
+  - terminator
   - bash-completion
-  - go
   - gpg
   - httpie
   - nmap
   - npm
-  - nvm
-  - ssh-copy-id
   - openssl
   - wget
-  - docker
-  - firefox
-  - google-chrome
-  - sequel-pro
-  - skitch
-  - slack
-  - sublime-text
-  - transmit
   - vagrant
   - virtualbox
-  - oh-my-zsh

@@ -1,6 +1,7 @@
 ---
 - hosts: all
   connection: local
+  become: true
 
   vars_files:
     - config.yml
@@ -11,12 +12,15 @@
         - ../config.yml
 
   roles:
-    - geerlingguy.git
-    - geerlingguy.dotfiles
-
+    - role: geerlingguy.git
+    - role: geerlingguy.dotfiles
+    - role: markushartman.phpstorm 
+    - role: jdauphant.sublimetext
+    - role: gantsign.oh-my-zsh
+      users:
+        - username: gerard
 
   tasks:
     - include: tasks/ansible-setup.yml
-
-    - include: tasks/sudoers.yml
-      when: configure_sudoers
+    - include: tasks/vim-config.yml
+    - include: tasks/install-packages.yml

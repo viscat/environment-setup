@@ -1,0 +1,7 @@
+---
+- name: geerlingguy.git
+- name: geerlingguy.dotfiles
+- name: jdauphant.sublimetext
+- name: gantsign.oh-my-zsh
+- name: markushartman.phpstorm
+
