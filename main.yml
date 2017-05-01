@@ -24,3 +24,4 @@
     - include: tasks/ansible-setup.yml
     - include: tasks/vim-config.yml
     - include: tasks/install-packages.yml
+    - include: tasks/albert.yml
